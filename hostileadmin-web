@@ -14,7 +14,9 @@ users:
     shell: /bin/bash
 
 packages:
- - apache2
+  - apache2
 
 runcmd:
- - service apache2 start
+  - rm -f /var/www/html/*
+  - git clone https://github.com/vrwmiller/hostileadmin.git /var/www/html
+  - service apache2 start
