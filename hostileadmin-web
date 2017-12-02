@@ -16,6 +16,15 @@ users:
 packages:
   - apache2
 
+write_files:
+  - path: "/home/vmiller/.vimrc"
+    owner: "vmiller:vmiller"
+    permissions: "0644"
+    content: |
+      syntax off
+      set nohlsearch
+      set t_Co=0
+
 runcmd:
   - rm -f /var/www/html/*
   - git clone https://github.com/vrwmiller/hostileadmin.git /var/www/html
