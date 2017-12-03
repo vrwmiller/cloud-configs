@@ -15,6 +15,7 @@ users:
 
 packages:
   - apache2
+  - python
 
 write_files:
   - path: "/home/vmiller/.vimrc"
