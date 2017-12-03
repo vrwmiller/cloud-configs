@@ -15,6 +15,7 @@ users:
 
 packages:
   - apache2
+  - python
 
 runcmd:
   - rm -f /var/www/html/*
